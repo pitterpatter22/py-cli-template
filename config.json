@@ -1,0 +1,11 @@
+{
+    "debug": true,
+    "app_name": "DemoBank",
+    "env": {
+      "API_KEY": "abc123"
+    },
+    "run_on_start": [
+      "addmoney -account 123 -amount 50",
+      "transfer -from 123 -to 456 -amount 10 --note 'startup run'"
+    ]
+  }

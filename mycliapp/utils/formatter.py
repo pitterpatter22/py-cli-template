@@ -25,6 +25,13 @@ def table(title: str, columns: list[str], rows: list[list[str]]):
         t.add_row(*[str(cell) for cell in row])
     console.print(t)
 
+def print_line(message: str = None, color: str = None, newline: bool = True):
+    console.rule(message, style=color)
+    if newline: console.print("\n")
+
+def sub_message(message: str):
+    console.print(f"[italic cyan]{message}[/]")
+    
 def _log_and_print(level: str, message: str, style: str):
     console.print(f"[{style}]{level}: {message}[/]")
     getattr(logging, level.lower() if level != "SUCCESS" else "info")(message)

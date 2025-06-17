@@ -1,11 +1,11 @@
 import logging
 
-def setup_logger():
+def setup_logger(level: str = "INFO"):
+    numeric_level = getattr(logging, level.upper(), logging.INFO)
     logging.basicConfig(
-        level=logging.INFO,
-        format='[%(asctime)s] %(levelname)s: %(message)s',
-        datefmt='%H:%M:%S',
+        level=numeric_level,
+        format="%(asctime)s [%(levelname)s] %(message)s",
         handlers=[
-            logging.FileHandler("app.log", mode='a')
-        ]
+            logging.FileHandler("mycliapp.log")
+            ]
     )

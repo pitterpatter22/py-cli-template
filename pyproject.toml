@@ -8,6 +8,8 @@ version = "0.1.0"
 description = "Interactive CLI terminal app template"
 requires-python = ">=3.8"
 dependencies = [
+    "prompt-toolkit>=3.0.51",
+    "pyfiglet>=0.8.post1",
     "rich>=14.0.0",
 ]
 
